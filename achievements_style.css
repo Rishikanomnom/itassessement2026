@@ -147,3 +147,124 @@ section{
     scroll-margin-top: 90px;
 } /*not let the sticky nav bar hamper the visibility of titles
 while manuvering within the page through the RA menu*/
+
+/* Section */
+.achievements {
+    padding: 80px 20px;
+    text-align: center;
+    background: #1a1a1a;
+    color: #f5f5f5;
+}
+
+/* Heading */
+.achievements h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #ffcc99;
+}
+
+/* Container */
+.achievement-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Cards */
+.achievement-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 204, 153, 0.2);
+    padding: 40px;
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 200px;
+    width: 100%;
+    gap: 40px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+/* Text block */
+.achievement-card .text {
+    flex: 1;
+}
+/* Image hidden initially */
+.achievement-card img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+
+/* Hover effect */
+.achievement-card:hover {
+    transform: translateY(-6px);
+    border-color: #ffcc99;
+    box-shadow: 0 10px 25px rgba(255, 204, 153, 0.15);
+}
+/* Show image on hover */
+.achievement-card:hover img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Title */
+.achievement-card h3 {
+    margin-bottom: 10px;
+    color: #ffcc99;
+}
+
+/* Text */
+.achievement-card p {
+    line-height: 1.6;
+    color: #e5e5e5;
+}
+
+
+/*FOOTER*/
+.footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* NAV LINKS */
+.footer-nav {
+    margin-bottom: 15px;
+}
+
+.footer-nav a {
+    color: #aaaaaa;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 14px;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+/* subtle dot separator effect */
+.footer-nav a:not(:last-child)::after {
+    content: "·";
+    margin-left: 12px;
+    color: #555;
+}
+
+/* HOVER EFFECT */
+.footer-nav a:hover {
+    color: #ffcc99;
+    text-shadow: 0 0 6px rgba(255, 204, 153, 0.5);
+}
