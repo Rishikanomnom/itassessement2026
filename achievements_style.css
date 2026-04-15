@@ -1,0 +1,149 @@
+/* Body */
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #1a1a1a;
+    color: #f5f5f5;
+    margin: 0;
+}
+
+section{
+    scroll-margin: 100px;
+}
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(20,20,20,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+    position: absolute;
+    left: 40px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffd7a0;
+}
+
+/* CENTER NAV */
+
+.nav-links{
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    position: relative;
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* underline animation */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #ffd7a0;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #ffd7a0;
+} 
+
+
+/* NAME */
+.name {
+    right: 140px;
+    color: #ffd7a0;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+/*Right section*/
+.right-section{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: absolute;
+    right: 40px;
+}
+
+/* CONNECT BUTTON */
+.connect-btn {
+    right: 40px;
+    background: #ffd7a0;
+    padding: 8px 16px;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.achievementbg{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.bg-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay-dark {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+    z-index: 1;
+}
+
+.achievementbgcontent {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #f5f5f5;
+}
+
+.achievementbgcontent h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(255, 215, 160, 0.6);
+}
+
+.achievementbgcontent p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+
+/*for all sections present*/
+section{
+    scroll-margin-top: 90px;
+} /*not let the sticky nav bar hamper the visibility of titles
+while manuvering within the page through the RA menu*/
