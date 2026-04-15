@@ -1,0 +1,256 @@
+/* Body */
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #1a1a1a;
+    color: #f5f5f5;
+    margin: 0;
+}
+
+section{
+    scroll-margin: 100px;
+}
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(20,20,20,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+    position: absolute;
+    left: 40px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffd7a0;
+}
+
+/* CENTER NAV */
+
+.nav-links{
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    position: relative;
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* underline animation */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #ffd7a0;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #ffd7a0;
+} 
+
+
+/* NAME */
+.name {
+    right: 140px;
+    color: #ffd7a0;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+/*Right section*/
+.right-section{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: absolute;
+    right: 40px;
+}
+
+/* CONNECT BUTTON */
+.connect-btn {
+    right: 40px;
+    background: #ffd7a0;
+    padding: 8px 16px;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.Rishika{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.bg-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay-dark {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+    z-index: 1;
+}
+
+.Rishikacontent {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #f5f5f5;
+}
+
+.Rishikacontent h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(255, 215, 160, 0.6);
+}
+
+.Rishikacontent p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+
+/*for all sections present*/
+section{
+    scroll-margin-top: 90px;
+} /*not let the sticky nav bar hamper the visibility of titles
+while manuvering within the page through the RA menu*/
+
+/*ABOUT PREVIEW*/
+.about-preview{
+    max-width: 1200px;
+    margin: 30px auto 50px auto; /* spacing from navbar & bottom */
+    padding: 0 20px;
+    text-align: center;
+    background-color: #1a1a1a;
+    color:#f5f5f5;
+    scroll-margin-top: 70px;
+}
+
+
+.about-preview h2 {
+    font-family: 'Playfair Display', serif; /* aesthetic serif for headings */
+    font-size: 40px;
+    color: #ffcc99; /* navbar accent color */
+    margin-bottom: 30px;
+    text-shadow: 0 0 20px rgba(255, 215, 160, 0.6);
+    margin-top: 10px;
+}
+
+/* Paragraph centered & justified */
+.about-preview p {
+    font-size: 22px;
+    line-height: 1.8;
+    color: #f5f5f5;
+    text-align: justify;
+    max-width: 100%;
+    transition: all 0.3s ease;
+}
+
+/* Highlighted words with hover animation */
+.highlight {
+    position: relative;
+    color: #ffffff; 
+    font-weight: 600;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.highlight::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px; /* adjust how far from the text */
+    width: 100%;
+    height: 80%; /* height of the highlight bar */
+    background: #ffcc99; /* highlight color */
+    z-index: -1; /* behind the text */
+    transform: scaleX(0); /* start hidden */
+    transform-origin: left; /* scale from left */
+    transition: transform 0.4s ease;
+}
+
+.highlight:hover {
+    color: #1a1a1a;
+    z-index: 1;
+}
+
+.highlight:hover::after{
+    transform: scaleX(1);
+}
+
+.aboutme-card {
+    background: #0000002b;
+    padding: 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    width: 97%;
+    box-shadow: 0 0 20px rgba(255, 204, 153, 0.08);
+}
+
+/*FOOTER*/
+.footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* NAV LINKS */
+.footer-nav {
+    margin-bottom: 15px;
+}
+
+.footer-nav a {
+    color: #aaaaaa;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 14px;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+/* subtle dot separator effect */
+.footer-nav a:not(:last-child)::after {
+    content: "·";
+    margin-left: 12px;
+    color: #555;
+}
+
+/* HOVER EFFECT */
+.footer-nav a:hover {
+    color: #ffcc99;
+    text-shadow: 0 0 6px rgba(255, 204, 153, 0.5);
+}

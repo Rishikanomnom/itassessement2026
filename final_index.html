@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <script>
+function toggleMenu() {
+    const menu = document.getElementById("dropdown");
+
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
+
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/final_style.css">
+</head>
+<body>
+  <header class="navbar">
+
+    <!--Toggle menu to navigate within the page-->
+    <div class="logo" onclick="toggleMenu()">RA</div>
+
+    <!-- DROPDOWN MENU -->
+    <div id="dropdown" class="dropdown">
+        <a href="#about-preview">About</a>
+        <a href="#gallery-preview">Gallery</a>
+        <a href="#education">Education</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- CENTER NAV -->
+    <nav class="nav-links">
+        <a href="final_index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="education.html">Education</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- RIGHT -->
+    <div class="right-section">
+        <div class="name">Rishika Agrawal</div>
+            <a href="https://linkedin.com" target="_blank" class="connect-btn">Connect</a>
+    </div>
+</header>  
+
+<!-- EYE VIDEO SECTION -->
+<section class="eye">
+    <video autoplay muted loop class="bg-video">
+        <source src="/video/eye_blink.mp4" type="video/mp4">
+    </video>
+
+    <!-- DARK OVERLAY -->
+    <div class="overlay-dark"></div>
+
+    <div class="eyecontent">
+        <h1>Welcome to My World</h1>
+        <p>Scroll to explore ↓</p>
+    </div>
+</section>
+
+ <!-- ABOUT SECTION-->
+
+<section id="about-preview" class="about-preview">
+<div class="aboutme-card">
+    <h2>About Me</h2>
+
+<p>
+        An <span class="highlight">innovative</span>, 
+        <span class="highlight">creative</span> straightforward
+        <span class="highlight">learner</span> and 
+        <span class="highlight">doer</span>. A knack in <span class="highlight">managing</span>,
+        <span class="highlight">leading</span> and <span class="highlight">organizing</span> events in the back as well possesing the ability to
+        <span class="highlight">edit</span>, <span class="highlight">record</span>, <span class="highlight">direct</span> and 
+        <span class="highlight">communicate</span> in the front end. An <span class="highlight">adaptive responder</span>
+        with a <span class="highlight">jolly personality</span>and <span class="highlight">serious</span> when needed. A <span class="highlight">courageous</span>....
+
+    </p>
+
+    <a href="about.html" class="read-more">Read More →</a>
+
+</section>
+</div>
+
+<!-- Gallery Preview Section -->
+<section class="gallery-preview" id="gallery-preview">
+    <h2>Gallery</h2>
+
+    <div class="gallery-container">
+
+        <div class="gallery-card">
+            <a href="gallery.html#babydoll" class="gallery-card">
+            <img src="/images/babydoll.jpg" alt="Baby Rishika">
+            </a>
+            <div class="gallery-overlay">
+                <h3>Kiddo</h3>
+                <p>Grasped any opportunity I got, in this case an apple.</p>
+            </div>
+            
+        </div>
+
+        <div class="gallery-card">
+            <img src="/images/birthdayparty.jpg" alt="Group picture of friends">
+            <div class="gallery-overlay">
+                <h3>Birthday Party</h3>
+                <p>An event organizer in heart, with even planning birthdays.</p>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="/images/hiking (3).jpg" alt="0.5x pic of Rishika">
+            <div class="gallery-overlay">
+                <h3>A sustainable forehead</h3>
+                <p>It's all about the leaves and who dont leave. Enjoying hiking with ones who didn't.</p>
+
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="/images/incompletefam.jpg" alt="Family picture">
+            <div class="gallery-overlay">
+                <h3>A born socializer</h3>
+                <p>Always ready to protect and form a familial bond.</p>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="/images/11_girlis.jpg" alt="In shock Rishika">
+            <div class="gallery-overlay">
+                <h3>Outspokenly Shooketh</h3>
+                <p>All those moments of emceeing led me to speak on behalf of everyone, that I want a hug too, please. </p>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="/images/galleryvisit_afterSEE.jpg" alt="Looking at Paintings">
+            <div class="gallery-overlay">
+                <h3>Artistically challenged</h3>
+                <p>Titles can be misleading, but it was a work of art so I didn't want to omit it. I do know a great deal about colors and how each stroke of paint talks.  </p>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="/images/celelb.jpg" alt="Picture with Manish Paul">
+            <div class="gallery-overlay">
+                <h3>A jester for you</h3>
+                <p>A knack for dad jokes and making every conversation lighter because a little haha and heheh goes a long way. </p>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="/images/pottery.jpg" alt="Pottery mugs">
+            <div class="gallery-overlay">
+                <h3>A potter of my life</h3>
+                <p>Building such confidence wasn't easy but life always had a way of shaping it together with me.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- View Full Gallery Button -->
+    <a href="gallery.html" class="view-gallery">View Full Gallery &rarr;</a>
+
+</section>
+<!--EDUCATION PART-->
+<section class="education" id="education">
+    <h2>Education</h2>
+
+    <div class="education-container">
+
+        <!-- LEFT SIDE TEXT -->
+        <div class="education-list">
+            <div class="edu-item" data-img="images/aceschool.jpg">
+                <h3>Ace School (2015 - 2022)</h3>
+                <p>I built my foundation and discovered creativity here.</p></div>
+            <div class="edu-item" data-img="images/acehiger.jpg">
+                <h3>Ace High School (2022-2024)</h3>
+                <p>I explored leadership and academic growth.</p></div>
+            <div class="edu-item" data-img="images/britishcollege.jpg">
+                <h3>The British College(2026 - 2030)</h3>
+                <p>I am pursuing internet and technology, driven with AI and innovation.</p>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE IMAGE -->
+        <div class="education-image">
+            <img src="images/aceschool.jpg" id="edu-display" alt="Ace School">
+        </div>
+
+    </div>
+    <div class="education-btn">
+    <a href="education.html">View Full Education →</a>
+</div>
+</section>
+
+<!-- Achievements-->
+
+<section class="achievements" id="achievements">
+    <h2>Achievements</h2>
+
+    <div class="achievement-container">
+
+ <div class="achievement-card with-image">
+    <div class="text">
+        <h3>Ardent 2023 Winner</h3>
+        <p>Won HR category in national competition, which overall aided in the win of Ardent 2023.</p>
+    </div>
+    <img src="/images/prestigious.JPG" alt="Ardent">
+</div>
+
+ <div class="achievement-card with-image">
+    <div class="text">
+        <h3>Organizing Hult Prize 2026</h3>
+        <p>Led the social impact team with on-campus social events as well as part of emceeing.</p>
+    </div>
+    <img src="/images/hult_prize.png" alt="Hult Prize certification">
+</div>
+
+ <div class="achievement-card with-image">
+    <div class="text">
+        <h3>Global Students Conclave 2021</h3>
+        <p>Represented Nepal Internationally in a platform that discussed about education. </p>
+    </div>
+    <img src="/images/Rishika Agrawal COP.png" alt="Certificate for Student Conclave">
+</div>
+
+        <!-- LAST CARD -->
+         <div class="achievement-btn">
+        <a href="achievements.html">
+            View More →
+        </a>
+    </div>
+    </div>
+</section>
+
+<!--SKILLS-->
+<div class="skills-card">
+<section class="skills" id="skills">
+    <h2>Skills</h2>
+
+    <div class="skills-container">
+
+        <!-- TABLE SIDE -->
+        <table class="skills-table">
+            <tr>
+                <th>Hard Skills</th>
+                <th>Soft Skills</th>
+            </tr>
+
+            <tr class="skill-row" data-img="images/eventmanage.jpg">
+                <td>Event Management</td>
+                <td>Leadership</td>
+            </tr>
+
+            <tr class="skill-row" data-img="images/digitalmarket.jpg">
+                <td>Digital Marketing</td>
+                <td>Communication</td>
+            </tr>
+
+            <tr class="skill-row" data-img="images/videoediting.jpg">
+                <td>Video Editing</td>
+                <td>Problem-solving</td>
+            </tr>
+
+            <tr class="skill-row" data-img="images/publicspeak.jpg">
+                <td>Public Speaking</td>
+                <td>Teamwork</td>
+            </tr>
+
+          <tr class="skill-row" data-img="images/projectcoordinate.jpg">
+                <td>Project coordination</td>
+                <td>Time Management</td>
+            </tr>
+
+            <tr class="skill-row" data-img="images/artisitcabilities.jpg">
+                <td>Artistic abilities</td>
+                <td>Adaptability</td>
+            </tr>
+
+
+        </table>
+
+        <!-- IMAGE SIDE -->
+        <div class="skills-image">
+            <img src="images/eventmanage.jpg" id="skill-display" alt="Skill Image">
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<section class="contact" id="contact">
+        <div class="contact-big-card"> 
+    <h2>Contact Me</h2>
+
+ <!-- NEW CARD -->
+
+        <div class="contact-container">
+
+            <!-- LEFT SIDE -->
+        <div class="contact-card-left">
+            <div class="contact-info">
+                <img src="/images/Rishika_Agrawal.jpeg" alt="Rishika">
+                <p>Let's connect and create something meaningful.</p>
+            </div>
+        </div>
+
+            <!-- RIGHT SIDE -->
+        <div class="contact-card-right">    
+            <div class="contact-form">
+                <form id="contactForm">
+                    <table>
+                        <tr>
+                            <td>Name:</td>
+                            <td><input type="text" name="name" required></td>
+                        </tr>
+
+                        <tr>
+                            <td>Email:</td>
+                            <td><input type="email" name="email" required></td>
+                        </tr>
+
+                        <tr>
+                            <td>Message:</td>
+                            <td><textarea name="message" required></textarea></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" style="text-align:center;">
+                                <button type="submit">Send</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+
+                <a href="contact.html" class="more-info">More Info →</a>
+
+                <p class="direct-mail">
+                    Or email me directly:
+                    <a href="mailto:arishike25@tbc.edu.np">arishika25@tbc.edu.np</a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+</section>
+
+<footer class="footer">
+        <!-- Bottom Navigation -->
+    <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="education.html">Education</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <p>Rishika Agrawal | Kathmandu, Nepal</p>
+    <marquee><p>Contact: arishika25@tbc.edu.np | LinkedIn | Instagram: art._an_me </p></marquee>
+</footer>
+
+<!--For education-->
+<script>
+    const eduItems = document.querySelectorAll(".edu-item");
+const displayImage = document.getElementById("edu-display");
+
+eduItems.forEach(item => {
+    item.addEventListener("mouseover", () => {
+        const newImg = item.getAttribute("data-img");
+        displayImage.src = newImg;
+    });
+});
+
+<!--For skills-->
+const skillRows = document.querySelectorAll(".skill-row");
+const skillDisplay = document.getElementById("skill-display");
+
+skillRows.forEach(row => {
+    row.addEventListener("mouseover", () => {
+        const newImg = row.getAttribute("data-img");
+        skillDisplay.src = newImg;
+    });
+});
+
+//form validation 
+document.querySelector("form").addEventListener("submit", function(e) {
+    const name = document.querySelector("input[name='name']").value.trim();
+    const email = document.querySelector("input[name='email']").value.trim();
+    const message = document.querySelector("textarea[name='message']").value.trim();
+
+    if(name === "" || email === "" || message === "") {
+        alert("Please fill all fields.");
+        e.preventDefault();
+        return;
+    }
+
+    if(!email.includes("@")) {
+        alert("Enter a valid email.");
+        e.preventDefault();
+    }
+
+      
+    alert("Message sent successfully!");
+
+    document.getElementById("contactForm").reset();
+});
+
+
+</script>
+</body>
+</html>
