@@ -4,38 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact me</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/contact_style.css">
+    
 </head>
 <body>
-    <h1>Contact Me</h1>
 
-<form>
-    <table>
-        <tr>
-            <td>Name:</td>
-            <td><input type="text" required></td>
-        </tr>
+     <header class="navbar">
+        <div class="logo">RA</div>
+    <!-- CENTER NAV -->
+         <nav class="nav-links">
+        <a href="final_index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="education.html">Education</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
-        <tr>
-            <td>Email:</td>
-            <td><input type="email" required></td>
-        </tr>
+    <!-- RIGHT -->
+    <div class="right-section">
+        <div class="name">Rishika Agrawal</div>
+            <a href="https://linkedin.com" target="_blank" class="connect-btn">Connect</a>
+    </div>
+</header>
 
-        <tr>
-            <td>Phone:</td>
-            <td><input type="text"></td>
-        </tr>
+<!-- EYE VIDEO SECTION -->
+<section class="contactbg">
+<img class="bg-img" src="/images/contactbg.jpg">
 
-        <tr>
-            <td>Message:</td>
-            <td><textarea required></textarea></td>
-        </tr>
+    <!-- DARK OVERLAY -->
+    <div class="overlay-dark"></div>
 
-        <tr>
-            <td colspan="2">
-                <button type="submit">Submit</button>
-            </td>
-        </tr>
-    </table>
+    <div class="contactbgcontent">
+        <h1>Welcome to the Contact section</h1>
+        <p>Scroll to explore ↓</p>
+    </div>
+</section>
+
+<div class="contact-box">
+
+<form id="contactForm">
+
+<table>
+
+<tr>
+<td>Name:</td>
+<td><input type="text" id="name"></td>
+</tr>
+
+<tr>
+<td>Email:</td>
+<td><input type="email" id="email"></td>
+</tr>
+
+<tr>
+<td>Subject:</td>
+<td><input type="text" id="subject"></td>
+</tr>
+
+<tr>
+<td>Phone:</td>
+<td><input type="text" id="phone"></td>
+</tr>
+
+<tr>
+<td>Purpose:</td>
+<td>
+<select id="purpose">
+    <option value="">Select</option>
+    <option value="project">Project</option>
+    <option value="internship">Internship</option>
+    <option value="general">General</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Message:</td>
+<td><textarea id="message" rows="5"></textarea></td>
+</tr>
+
+<tr>
+<td colspan="2">
+<button type="submit">Send Message</button>
+</td>
+</tr>
+
+</table>
+
+<p id="errorMsg"></p>
+
 </form>
+
+</div>
+
+
+<footer class="footer">
+        <!-- Bottom Navigation -->
+    <div class="footer-nav">
+        <a href="final_index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="education.html">Education</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="contact.html">Contact me</a>
+    </div>
+    <p>Rishika Agrawal | Kathmandu, Nepal</p>
+    <marquee><p>Contact: arishika25@tbc.edu.np | LinkedIn | Instagram: art._an_me </p></marquee>
+</footer>
+
+<script>
+document.getElementById("contactForm").onsubmit = function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let subject = document.getElementById("subject").value;
+    let message = document.getElementById("message").value;
+    let purpose=document.getElementById("purpose").value;
+
+    let errorMsg = document.getElementById("errorMsg");
+
+    if (name == "" || email == "" || subject == "" || message == "" || purpose=="") {
+        errorMsg.textContent = "Please fill all required fields";
+        return;
+    }
+
+    alert("Message sent successfully!");
+    this.reset();
+    errorMsg.textContent = "";
+};
+</script>
 </body>
 </html>
