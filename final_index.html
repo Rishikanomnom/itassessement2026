@@ -5,29 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index Page</title>
     <script>
+        //function for drop down menu
 function toggleMenu() {
-    const menu = document.getElementById("dropdown");
+    const menu = document.getElementById("dropdown"); //find element with id, stores it in menu
 
-    if (menu.style.display === "flex") {
-        menu.style.display = "none";
-    } else {
+    if (menu.style.display === "flex") { //if the menu is visible
+        menu.style.display = "none"; //yes, hide it
+    } else { //no, show it 
         menu.style.display = "flex";
     }
 }
 
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+<!--imports fonts from google, headings-playfair display, poppins- body-->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet"> 
+<!--links your external CSS file-->
 <link rel="stylesheet" type="text/css" href="/final_style.css">
 </head>
 <body>
-  <header class="navbar">
+    <!--main top bar container-->
+  <header class="navbar"> 
 
-    <!--Toggle menu to navigate within the page-->
+    <!--Toggle menu to navigate within the page, with the use of JS through RA-->
     <div class="logo" onclick="toggleMenu()">RA</div>
 
     <!-- DROPDOWN MENU -->
-    <div id="dropdown" class="dropdown">
-        <a href="#about-preview">About</a>
+    <div id="dropdown" class="dropdown"> <!--hidden menu that appears when clicking RA-->
+        <a href="#about-preview">About</a> <!--scrolls to section with the id-->
         <a href="#gallery-preview">Gallery</a>
         <a href="#education">Education</a>
         <a href="#achievements">Achievements</a>
@@ -36,9 +40,9 @@ function toggleMenu() {
     </div>
 
     <!-- CENTER NAV -->
-    <nav class="nav-links">
+    <nav class="nav-links"> <!--main navigation to different pages-->
         <a href="final_index.html">Home</a>
-        <a href="about.html">About</a>
+        <a href="about.html">About</a> <!--taking to different page-->
         <a href="gallery.html">Gallery</a>
         <a href="education.html">Education</a>
         <a href="achievements.html">Achievements</a>
@@ -46,22 +50,23 @@ function toggleMenu() {
     </nav>
 
     <!-- RIGHT -->
-    <div class="right-section">
-        <div class="name">Rishika Agrawal</div>
-            <a href="https://linkedin.com" target="_blank" class="connect-btn">Connect</a>
+    <div class="right-section"> <!--groups name and the button-->
+        <div class="name">Rishika Agrawal</div> <!--displays the name-->
+            <a href="https://linkedin.com" target="_blank" class="connect-btn">Connect</a> <!--new linkedin tab-->
     </div>
 </header>  
 
 <!-- EYE VIDEO SECTION -->
-<section class="eye">
-    <video autoplay muted loop class="bg-video">
+<section class="eye"> <!--full screen intro section-->
+    <video autoplay muted loop class="bg-video"> <!--autoplay, plays automatically
+        muted written to play automatically and loop repeats it-->
         <source src="/video/eye_blink.mp4" type="video/mp4">
     </video>
 
     <!-- DARK OVERLAY -->
-    <div class="overlay-dark"></div>
+    <div class="overlay-dark"></div> <!--makes the text above the video readable-->
 
-    <div class="eyecontent">
+    <div class="eyecontent"> <!--text container above video for the words-->
         <h1>Welcome to My World</h1>
         <p>Scroll to explore ↓</p>
     </div>
@@ -69,11 +74,12 @@ function toggleMenu() {
 
  <!-- ABOUT SECTION-->
 
-<section id="about-preview" class="about-preview">
-<div class="aboutme-card">
+<section id="about-preview" class="about-preview"> <!--section with id navigation-->
+<div class="aboutme-card"> <!--card container-->
     <h2>About Me</h2>
 
 <p>
+    <!--inline container with highlight helps with hover effect-->
         An <span class="highlight">innovative</span>, 
         <span class="highlight">creative</span> straightforward
         <span class="highlight">learner</span> and 
@@ -87,14 +93,14 @@ function toggleMenu() {
 
     <a href="about.html" class="read-more">Read More →</a>
 
-</section>
 </div>
+</section>
 
 <!-- Gallery Preview Section -->
 <section class="gallery-preview" id="gallery-preview">
     <h2>Gallery</h2>
 
-    <div class="gallery-container">
+    <div class="gallery-container"> <!--layout wrapper-->
 
         <div class="gallery-card">
             <a href="gallery.html#babydoll" class="gallery-card">
