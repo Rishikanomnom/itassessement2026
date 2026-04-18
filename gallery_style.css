@@ -150,7 +150,7 @@ while manuvering within the page through the RA menu*/
 
 .gallery-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /*3 equal columns*/
     gap: 20px;
     padding: 20px;
 }
@@ -179,7 +179,7 @@ while manuvering within the page through the RA menu*/
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    opacity: 0;
+    opacity: 0; /*before hover not seen*/
     transition: 0.3s ease;
     padding: 15px;
     text-align: center;
@@ -188,7 +188,7 @@ while manuvering within the page through the RA menu*/
 }
 
 .gallery-item:hover .overlay {
-    opacity: 1;
+    opacity: 1; /*hovered over than seen*/
 }
 
 .gallery-item:hover img {
@@ -196,14 +196,14 @@ while manuvering within the page through the RA menu*/
     transition: 0.3s ease;
 }
 
-.gallery-overlay h3 {
+.overlay h3 {
     font-size: 15px;
     margin-bottom: 6px;
     font-weight: 600;
     color: #ffcc99;
 }
 
-.gallery-overlay p {
+.overlay p {
     font-size: 13px;
     line-height: 1.4;
     margin-bottom: 10px;
