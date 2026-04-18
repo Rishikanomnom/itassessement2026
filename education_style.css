@@ -175,15 +175,16 @@ while manuvering within the page through the RA menu*/
     margin: auto;
 }
 
-.timeline::after {
+/*how the line is made*/
+.timeline::after { /*creates empty fake element*/
     content: '';
     position: absolute;
     width: 3px;
     background: #ffcc99;
-    top: -80px;
+    top: -80px; /*making it look like its coming from the header*/
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /*centers perfectly, shifting back by half of its own width*/
 }
 
 /* TIMELINE ITEM */
@@ -222,19 +223,19 @@ while manuvering within the page through the RA menu*/
 .education-card img {
     width: 100%;
     height: 220px;
-    object-fit: cover;
+    object-fit: cover; /*fills the space */
     border-radius: 10px;
 }
 
 .education-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /*lifts card */
     box-shadow: 0 0 25px rgba(255, 204, 153, 0.25);
 }
 
 /* DETAIL GRID */
 .edu-details {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /*stacks card vertically*/
     gap: 10px;
     margin-top: 15px;
 }
@@ -264,7 +265,7 @@ while manuvering within the page through the RA menu*/
     font-size: 14px;
 }
 
-/* ONLY LIFT ON HOVER (NO COLOR CHANGE) */
+/* only lift */
 .detail-card:hover {
     transform: translateY(-5px);
 }

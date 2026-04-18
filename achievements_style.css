@@ -179,11 +179,9 @@ while manuvering within the page through the RA menu*/
     border: 1px solid rgba(255, 204, 153, 0.2);
     padding: 40px;
     border-radius: 12px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     min-height: 200px;
     width: 100%;
     gap: 40px;
@@ -200,7 +198,6 @@ while manuvering within the page through the RA menu*/
     width: 140px;
     height: 140px;
     object-fit: cover;
-
     opacity: 0;
     transform: scale(0.9);
     transition: all 0.3s ease;
