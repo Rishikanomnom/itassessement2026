@@ -72,7 +72,7 @@
 <td>Purpose:</td>
 <td>
 <select id="purpose">
-    <option value="">Select</option>
+    <option value="">Select</option> <!--default empty value for js validation-->
     <option value="project">Project</option>
     <option value="internship">Internship</option>
     <option value="general">General</option>
@@ -93,7 +93,7 @@
 
 </table>
 
-<p id="errorMsg"></p>
+<p id="errorMsg"></p> <!--initially empty but js fills when theres an error-->
 
 </form>
 
@@ -116,24 +116,27 @@
 
 <script>
 document.getElementById("contactForm").onsubmit = function(e) {
-    e.preventDefault();
-
+    //select form, attchh the event name e and uns when user clicks submit
+    e.preventDefault();//stops from default behavior, refereshing page, sending data in url
+//accepting input value
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
     let subject = document.getElementById("subject").value;
     let message = document.getElementById("message").value;
     let purpose=document.getElementById("purpose").value;
-
+//display validation message 
     let errorMsg = document.getElementById("errorMsg");
 
-    if (name == "" || email == "" || subject == "" || message == "" || purpose=="") {
+    if (name == "" || email == "" || subject == "" || message == "" || purpose=="")
+    //checks if nothing is there
+ {
         errorMsg.textContent = "Please fill all required fields";
-        return;
+        return; //stops execution immediately
     }
 
     alert("Message sent successfully!");
-    this.reset();
-    errorMsg.textContent = "";
+    this.reset();//clear the form after data sent successfully
+    errorMsg.textContent = ""; //remove previous error message
 };
 </script>
 </body>
