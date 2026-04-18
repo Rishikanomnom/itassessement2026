@@ -177,14 +177,14 @@ function toggleMenu() {
 
 </section>
 <!--EDUCATION PART-->
-<section class="education" id="education">
+<section class="education" id="education"> <!--card section outer container-->
     <h2>Education</h2>
 
     <div class="education-container">
 
         <!-- LEFT SIDE TEXT -->
         <div class="education-list">
-            <div class="edu-item" data-img="images/aceschool.jpg">
+            <div class="edu-item" data-img="images/aceschool.jpg"> <!--custom attribute, holds image path-->
                 <h3>Ace School (2015 - 2022)</h3>
                 <p>I built my foundation and discovered creativity here.</p></div>
             <div class="edu-item" data-img="images/acehiger.jpg">
@@ -214,12 +214,12 @@ function toggleMenu() {
 
     <div class="achievement-container">
 
- <div class="achievement-card with-image">
+ <div class="achievement-card with-image"> <!--base design than adds layout design to it-->
     <div class="text">
         <h3>Ardent 2023 Winner</h3>
         <p>Won HR category in national competition, which overall aided in the win of Ardent 2023.</p>
     </div>
-    <img src="/images/prestigious.JPG" alt="Ardent">
+    <img src="/images/prestigious.JPG" alt="Ardent"> <!--initially hidden-->
 </div>
 
  <div class="achievement-card with-image">
@@ -261,7 +261,7 @@ function toggleMenu() {
                 <th>Soft Skills</th>
             </tr>
 
-            <tr class="skill-row" data-img="images/eventmanage.jpg">
+            <tr class="skill-row" data-img="images/eventmanage.jpg"> <!--JS target and stores image apth-->
                 <td>Event Management</td>
                 <td>Leadership</td>
             </tr>
@@ -304,8 +304,9 @@ function toggleMenu() {
 </div>
 </section>
 
-<section class="contact" id="contact">
-        <div class="contact-big-card"> 
+<!--CONTACT -->
+<section class="contact" id="contact"> <!--class for navigation, id for styling-->
+        <div class="contact-big-card"> <!--wraps everything-->
     <h2>Contact Me</h2>
 
  <!-- NEW CARD -->
@@ -323,11 +324,12 @@ function toggleMenu() {
             <!-- RIGHT SIDE -->
         <div class="contact-card-right">    
             <div class="contact-form">
-                <form id="contactForm">
+                <form id="contactForm"> <!--imp for js validation-->
                     <table>
                         <tr>
                             <td>Name:</td>
-                            <td><input type="text" name="name" required></td>
+                            <td><input type="text" name="name" required></td><!--name = name used by js data identification
+                            required automatically shows error if not filled, built in HTML validation-->
                         </tr>
 
                         <tr>
@@ -342,17 +344,17 @@ function toggleMenu() {
 
                         <tr>
                             <td colspan="2" style="text-align:center;">
-                                <button type="submit">Send</button>
+                                <button type="submit">Send</button> <!--trigger form submiision including js trigger-->
                             </td>
                         </tr>
                     </table>
                 </form>
 
-                <a href="contact.html" class="more-info">More Info →</a>
+                <a href="contact.html" class="more-info">More Info →</a><!--navigation to full contact page-->
 
                 <p class="direct-mail">
                     Or email me directly:
-                    <a href="mailto:arishike25@tbc.edu.np">arishika25@tbc.edu.np</a>
+                    <a href="mailto:arishike25@tbc.edu.np">arishika25@tbc.edu.np</a><!--opens mail app-->
                 </p>
             </div>
 
@@ -361,6 +363,7 @@ function toggleMenu() {
 </div>
 </section>
 
+<!--FOOTER -->
 <footer class="footer">
         <!-- Bottom Navigation -->
     <div class="footer-nav">
@@ -369,60 +372,63 @@ function toggleMenu() {
         <a href="gallery.html">Gallery</a>
         <a href="education.html">Education</a>
         <a href="achievements.html">Achievements</a>
-        <a href="#skills">Skills</a>
+        <a href="#skills">Skills</a> <!--internal link-->
         <a href="#contact">Contact</a>
         <a href="contact.html">Contact me (more info) </a>
     </div>
     <p>Rishika Agrawal | Kathmandu, Nepal</p>
     <div class="footer-nav">
     <marquee><p>Contact: <a href="http://newwindow.com" target="_blank">arishikanewindow25@tbc.edu.np</a> | LinkedIn | Instagram: art._an_me </p></marquee>
+    <!--target blank open thes new tab as mentioned in requirement-->
     </div>
 </footer>
 
 <!--For education-->
 <script>
-    const eduItems = document.querySelectorAll(".edu-item");
-const displayImage = document.getElementById("edu-display");
+    const eduItems = document.querySelectorAll(".edu-item"); //selects all the items of edu-item
+const displayImage = document.getElementById("edu-display");//selects the image on right
 
-eduItems.forEach(item => {
-    item.addEventListener("mouseover", () => {
-        const newImg = item.getAttribute("data-img");
-        displayImage.src = newImg;
+eduItems.forEach(item => { //going through each item
+    item.addEventListener("mouseover", () => { //when user hovers
+        const newImg = item.getAttribute("data-img"); //it reads the image path mentioned
+        displayImage.src = newImg;//changes the image instantly
     });
 });
 
 <!--For skills-->
-const skillRows = document.querySelectorAll(".skill-row");
-const skillDisplay = document.getElementById("skill-display");
+const skillRows = document.querySelectorAll(".skill-row");//selects all the items of skill-row
+const skillDisplay = document.getElementById("skill-display");//selects image
 
-skillRows.forEach(row => {
-    row.addEventListener("mouseover", () => {
-        const newImg = row.getAttribute("data-img");
-        skillDisplay.src = newImg;
+skillRows.forEach(row => {// goes through each row 
+    row.addEventListener("mouseover", () => {//when hovered
+        const newImg = row.getAttribute("data-img");//read the image path
+        skillDisplay.src = newImg;//change the image instantly
     });
 });
 
 //form validation 
-document.querySelector("form").addEventListener("submit", function(e) {
-    const name = document.querySelector("input[name='name']").value.trim();
+document.querySelector("form").addEventListener("submit", function(e) { //selects the form, runs only when user clicks SEND
+    //e automatically provided by js represents the action happening
+    const name = document.querySelector("input[name='name']").value.trim();//selects type by name attribute, removes spaces
     const email = document.querySelector("input[name='email']").value.trim();
     const message = document.querySelector("textarea[name='message']").value.trim();
 
-    if(name === "" || email === "" || message === "") {
+    if(name === "" || email === "" || message === "") {//checks if any field is empty
         alert("Please fill all fields.");
-        e.preventDefault();
-        return;
+        e.preventDefault(); //stops from submitting
+        //without this page reloads, sends data in the URL
+        return;//stop the execution of the rest of this function
     }
 
-    if(!email.includes("@")) {
-        alert("Enter a valid email.");
-        e.preventDefault();
+    if(!email.includes("@")) {//if email doesnt have @
+        alert("Enter a valid email.");//valid mail required to put
+        e.preventDefault();//stops from submitting
     }
 
       
-    alert("Message sent successfully!");
+    alert("Message sent successfully!");//else when works just fine, confirmation showed
 
-    document.getElementById("contactForm").reset();
+    document.getElementById("contactForm").reset();//clears form after that
 });
 
 

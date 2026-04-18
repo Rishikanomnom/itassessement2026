@@ -398,8 +398,8 @@ while manuvering within the page through the RA menu*/
     padding: 25px;
     border-radius: 10px;
     text-decoration: none;
-    width: 70%;
-    margin-left: 200px;
+    width: 70%; /*hard way of aligning*/
+    margin-left: 200px;/*than pushing it from the left*/
     align-items: center;
     box-shadow: 0 0 20px rgba(255, 204, 153, 0.08);
 }
@@ -437,7 +437,7 @@ while manuvering within the page through the RA menu*/
 /* container */
 .education-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /*splits content into left and right side*/
     align-items: center;
     max-width: 900px;
     margin: auto;
@@ -447,7 +447,7 @@ while manuvering within the page through the RA menu*/
 /* LEFT TEXT */
 .education-list {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;/*stacking of items*/
     gap: 20px;
 }
 
@@ -455,18 +455,18 @@ while manuvering within the page through the RA menu*/
     background: rgba(255, 255, 255, 0.04);
     padding: 18px 20px;
     border-radius: 10px;
-    cursor: pointer;
+    cursor: pointer;/*clickable cursor*/
     transition: all 0.3s ease;
     text-align: left;
 }
 
 .edu-item:hover {
     color: #ffcc99;
-    transform: translateX(8px);
+    transform: translateX(8px); /*moves to the right*/
 }
 
 /* RIGHT IMAGE */
-.education-image img {
+.education-image img { /*fixed display, fills box */
     width: 400px;
     height: 300px;
     object-fit: cover;
@@ -497,7 +497,6 @@ while manuvering within the page through the RA menu*/
 }
 
 /* Achievements*/
-/* Achievements Section */
 .achievements {
     padding: 60px 20px; /* reduce a little to match other sections */
     text-align: center;
@@ -526,7 +525,7 @@ while manuvering within the page through the RA menu*/
     max-width: 800px;
     margin: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /*stack vertically with spacing*/
     gap: 20px;
 }
 
@@ -554,13 +553,13 @@ while manuvering within the page through the RA menu*/
 
 /* Hover effect */
 .achievement-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /*card moves up*/
     background: rgba(255,204,153,0.1);
     box-shadow: 0 0 15px rgba(255,204,153,0.15);
 }
 
 /* Cards with images */
-.with-image {
+.with-image { /*creates the actual view of how it looks*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -571,13 +570,14 @@ while manuvering within the page through the RA menu*/
     width: 120px;
     height: 120px;
     object-fit: cover;
-    opacity: 0;
-    transform: scale(0.95);
+    opacity: 0; /*invisible*/
+    transform: scale(0.95); /*slightly smaller before*/
     transition: all 0.4s ease;
 }
 
 /* Show image on hover */
-.with-image:hover img {
+.with-image:hover img { /*when hovering the card affect the image inside it*/
+    /*fade in grows slightly*/
     opacity: 1;
     transform: scale(1);
 }
@@ -588,7 +588,7 @@ while manuvering within the page through the RA menu*/
     text-align: center;
 }
 
-.achievement-btn a {
+.achievement-btn a { /*styled like a button*/
     display: inline-block;
     padding: 10px 25px;
     background: #ffffff;
@@ -630,15 +630,15 @@ while manuvering within the page through the RA menu*/
 /* container */
 .skills-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* EXACT half split */
+    grid-template-columns: 1fr 1fr; /* EXACT half split into two equal columns */
     align-items: center;
-    gap: 40px;
+    gap: 40px; /*space between table and image*/
 }
 
 /* TABLE */
-.skills-table {
+.skills-table {/*removing soacing between cells*/
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse;/*making clean borders*/
     color: #f5f5f5;
 }
 
@@ -649,15 +649,15 @@ while manuvering within the page through the RA menu*/
     text-align: center;
 }
 
-/* ONLY middle vertical line */
-.skills-table td:first-child,
-.skills-table th:first-child {
-    border-right: 1px solid rgba(255,255,255,0.2);
+/* ONLY middle vertical line, apply border on right of first column */
+.skills-table td:first-child, /*select the first td element in that table*/
+.skills-table th:first-child {/*select first th element */
+    border-right: 1px solid rgba(255,255,255,0.2); /*only adds the middle vertical line*/
 }
 
-/* ONLY row separators */
-.skills-table tr:not(:last-child) td {
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+/* ONLY row separators, apply border below every row except last*/
+.skills-table tr:not(:last-child) td { /*select all rows except the last one inside the table*/
+    border-bottom: 1px solid rgba(255,255,255,0.1); /*adds only row seperators */
 }
 
 /* HEADINGS */
@@ -705,7 +705,7 @@ while manuvering within the page through the RA menu*/
     text-shadow: 0 0 20px rgba(255,204,153,0.4);
 }
 
-.contact-container {
+.contact-container { /*creates the two distinct areas for two seperate cards*/
     display: flex;
     align-items: center;
     gap: 40px;
@@ -729,19 +729,19 @@ while manuvering within the page through the RA menu*/
 }
 
 .contact-form input{
-    width: 100%;
+    width: 100%; /*fits table cell*/
     padding: 8px;
 }
 .contact-form textarea {
     width: 270px;
-    padding: 8px;
+    padding: 8px; 
     height: 100px;
-    resize: none;
+    resize: none;/*user cant resize*/
 }
 
 .contact-form button {
     padding: 10px 20px;
-    cursor: pointer;
+    cursor: pointer;/*clickable cursor*/
     font-family: 'Poppins',sans-serif;
 }
 
@@ -757,10 +757,10 @@ while manuvering within the page through the RA menu*/
 }
 
 .contact-big-card {
-    max-width: 1100px;
+    max-width: 1100px; /*proper centering*/
     margin: auto;
     padding: 50px;
-    border-radius: 12px;
+    border-radius: 12px; /*round corners*/
     background: #0000002b;
     box-shadow: 0 0 30px rgba(255, 204, 153, 0.15); /* glow */
 }
@@ -770,7 +770,7 @@ while manuvering within the page through the RA menu*/
     padding: 25px;
     border-radius: 10px;
     max-width: 400px;
-    flex: 1;
+    flex: 1; /*equal width*/
 }
 
 /* Link */
@@ -793,7 +793,7 @@ while manuvering within the page through the RA menu*/
     background: black;
     color: white;
     text-align: center;
-    padding: 30px 20px;
+    padding: 30px 20px; /*top, bottom & left and right*/
 }
 
 /* NAV LINKS */
@@ -811,7 +811,8 @@ while manuvering within the page through the RA menu*/
 }
 
 /* subtle dot separator effect */
-.footer-nav a:not(:last-child)::after {
+.footer-nav a:not(:last-child)::after { /*selects all links exept the last one*/
+    /*fake content after each link, content being the dot with margin*/
     content: "·";
     margin-left: 12px;
     color: #555;
